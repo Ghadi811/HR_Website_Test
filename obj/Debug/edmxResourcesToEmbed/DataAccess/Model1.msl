@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HRModelStoreContainer" CdmEntityContainer="HREntities">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="HRModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ID_stu" ColumnName="ID_stu" />
+          <ScalarProperty Name="stu_name" ColumnName="stu_name" />
+          <ScalarProperty Name="stu_Nat" ColumnName="stu_Nat" />
+          <ScalarProperty Name="stu_Gender" ColumnName="stu_Gender" />
+          <ScalarProperty Name="stu_Birth" ColumnName="stu_Birth" />
+          <ScalarProperty Name="stu_Mobile" ColumnName="stu_Mobile" />
+          <ScalarProperty Name="stu_Email" ColumnName="stu_Email" />
+          <ScalarProperty Name="uni_Branch" ColumnName="uni_Branch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPs">
+      <EntityTypeMapping TypeName="HRModel.EMP">
+        <MappingFragment StoreEntitySet="EMP">
+          <ScalarProperty Name="nat_id" ColumnName="nat_id" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Data_Of_Birth" ColumnName="Data_Of_Birth" />
+          <ScalarProperty Name="Emp_Gender" ColumnName="Emp_Gender" />
+          <ScalarProperty Name="Emp_Nat" ColumnName="Emp_Nat" />
+          <ScalarProperty Name="Emp_name" ColumnName="Emp_name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

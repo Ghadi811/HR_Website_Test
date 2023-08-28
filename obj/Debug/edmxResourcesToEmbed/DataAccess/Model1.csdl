@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID_stu" />
+    </Key>
+    <Property Name="ID_stu" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="stu_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="stu_Nat" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="stu_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="stu_Birth" Type="DateTime" Precision="0" />
+    <Property Name="stu_Mobile" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="stu_Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="uni_Branch" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="EMPs" EntityType="HRModel.EMP" />
+  </EntityContainer>
+  <EntityType Name="EMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Emp_Nat" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Emp_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Data_Of_Birth" Type="DateTime" Precision="0" />
+    <Property Name="Mobile" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Branch" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="nat_id" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+</Schema>
